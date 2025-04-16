@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    src: url("/fonts/Roboto-VariableFont_wdth,wght.ttf");
+    font-family: "Roboto Sans Variable";
+    font-style: normal;
+    font-weight: 200 700;
+}
+
+@font-face {
+    src: url("/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf");
+    font-family: "Roboto Sans Variable";
+    font-style: italic;
+    font-weight: 200 700;
+}
+
+@layer base {
+    h1 {
+        @apply text-3xl;
+        @apply font-semibold;
+        @apply pt-2;
+        @apply pb-1;
+        @apply border-b;
+        @apply border-gray-200;
+    }
+    h2 {
+        @apply text-xl;
+        @apply font-semibold;
+        @apply pt-2;
+        @apply pb-1;
+    }
+    h3 {
+        @apply text-lg;
+        @apply font-semibold;
+    }
+    a {
+        @apply text-blue-500;
+        @apply hover:text-blue-800;
+    }
+    table {
+        @apply border-collapse;
+        @apply rounded-lg;
+        @apply w-full;
+    }
+    th {
+        @apply text-left;
+        @apply font-semibold;
+        @apply p-3;
+        @apply bg-gray-50;
+        @apply border;
+        @apply border-gray-300;
+    }
+    td {
+        @apply font-medium;
+        @apply p-3;
+        @apply border;
+        @apply border-gray-300;
+    }
+}
+
+:root {
+    font-family: "Roboto", sans-serif;
+}
