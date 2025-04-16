@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+<ul>
+  {% for page in section.pages | sort(attribute="extra.story_id")%}
+    {% set story_data = load_data(path="/stories/" ~ page.extra.story_file) %}
+    {% set data = load_data(path="/stories/" ~ page.extra.file) %}
+    {% set cur_story = story_data %}
+
+    {% set cur_story = story_data.rows | filter(attribute="id", value=page.extra.story_id | as_str) | nth(n=0) %}
+    {% set cur_title = trans(key="story_title", lang=lang) %}
+    {% set cur_trans = trans(key="sentences_translation", lang=lang) %}
+    {% set cur_gloss = trans(key="glosses_translation", lang=lang) %}
+    {% set page_langs = page.translations | map(attribute="lang")%}
+    {% if page_langs is containing(lang) %}
+    <li><a href="{{ page.permalink | safe }}">{{ cur_story.value[cur_title] }}</a> {{trans(key="by", lang=lang)}} {{cur_story.value.author}}</li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endblock content %}

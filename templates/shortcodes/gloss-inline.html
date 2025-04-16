@@ -1,0 +1,16 @@
+<div>
+	<div class="gloss-container" aria-label="Interlinear gloss">
+		<p class="original-text" aria-label="Original text">hɛ yí khúúnbrɛn ɛ tɛ́ á yɔn</p>
+
+		<div class="gloss-line" aria-label="Morpheme-by-morpheme gloss">
+			{% for word in orthography | split(pat=" ") %}
+			<ruby>
+				{{ word }}
+				<rt aria-label="Gloss for '{{ word }}'">{{ gloss | split(pat=" ") | nth(n=loop.index0) }}</rt>
+			</ruby>
+			{% endfor %}
+		</div>
+
+		<p class="translation" aria-label="Translation">Everything you do is good,</p>
+	</div>
+</div>

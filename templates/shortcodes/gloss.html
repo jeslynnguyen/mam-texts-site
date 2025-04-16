@@ -1,0 +1,20 @@
+{% set data = load_data(path=page.colocated_path ~ path) %}
+{% set morphemes = data.morphemes | split(pat=" ") %}
+{% set orthography = data.orthography | split(pat=" ") %}
+{% set glosses = data.gloss | split(pat=" ") %}
+<div>
+	<div class="gloss-container" aria-label="Interlinear gloss">
+		<p class="original-text" aria-label="Original text">hɛ yí khúúnbrɛn ɛ tɛ́ á yɔn</p>
+
+		<div class="gloss-line" aria-label="Morpheme-by-morpheme gloss">
+			{% for word in data.orthography | split(pat=" ") %}
+			<ruby>
+				{{ word }}
+				<rt aria-label="Gloss for '{{ word }}'">{{ glosses | nth(n=loop.index0) }}</rt>
+			</ruby>
+			{% endfor %}
+		</div>
+
+		<p class="translation" aria-label="Translation">Everything you do is good,</p>
+	</div>
+</div>

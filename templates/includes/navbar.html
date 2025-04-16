@@ -1,0 +1,48 @@
+<nav id="navbar" class="sticky top-0 z-10 bg-slate-100 border-b-2 border-gray-300 mb-2">
+    <!-- TODO: improve small screen UX by adding menu button when screen is small -->
+  <div class="mx-auto max-w-3xl px-2 sm:px-4 lg:px-6">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="flex space-x-0">
+        <a href="{{ get_url(path="@/_index.md", lang=lang) }}" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">{{ trans(key="home", lang=lang)}}</a>
+        <a href="{{ get_url(path="orthography", lang=lang) }}" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">{{ trans(key="orthography", lang=lang)}}</a>
+        <a href="{{ get_url(path="texts", lang=lang) }}" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">{{ trans(key="texts", lang=lang)}}</a>
+        <a href="{{ get_url(path="project-members", lang=lang) }}" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">{{ trans(key="project_members", lang=lang)}}</a>
+        <a href="{{ get_url(path="storytellers", lang=lang) }}" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">{{ trans(key="storytellers", lang=lang)}}</a>
+        <a href="{{ get_url(path="dictionary", lang=lang) }}" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">{{ trans(key="dictionary", lang=lang)}}</a>
+      </div>
+
+      <div class="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0" id="langSwitcher" >
+          <!-- Language dropdown -->
+        <div class="relative ml-3">
+          <div>
+            <button type="button" class="block rounded-t-md rounded-l-md text-black font-medium px-3 py-2 text-base" id="langButton" aria-expanded="false" aria-haspopup="true">
+              <span class="sr-only">Open language switcher</span>
+              {{ trans(key="language", lang=lang) }} <i class="bi bi-caret-down-fill"></i>
+            </button>
+          </div>
+
+          <!-- Possible TODO: add a transition here via editing toggle.js -->
+
+          <div class="absolute top-8 right-0 z-10 mt-2 w-24 rounded-b-md bg-white py-1 border-2 border-slate-300" role="menu" id="langMenu" aria-orientation="vertical" aria-labelledby="lang-menu-button" tabindex="-1">
+              {# Grab page or section translations based on current #}
+              {% if page %}
+                {% set translations = page.translations %}
+              {% else %}
+                {% set translations = section.translations %}
+              {% endif %}
+
+              {% if translations | length > 1 %}
+                {% for trans in translations | sort(attribute="lang") %}
+                  <a href="{{ trans.permalink }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-{{loop.index}}">{{ trans(key="lang_name", lang=trans.lang) }}</a>
+                {% endfor %}
+              {% else %}
+              <div class="navbar-right">
+                  <a href="javascript:void(0)">No Translation</a>
+              </div>
+              {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

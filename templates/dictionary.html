@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-4xl mx-auto px-4 py-4">
+  <!-- View Switcher -->
+  <div class="mb-6 flex justify-center">
+    <div class="inline-flex rounded-md shadow-sm" role="group">
+      <a href="{{ get_url(path='dictionary', lang=lang) }}"
+         class="px-4 py-2 text-sm font-medium border border-gray-300 
+                {% if page.path == 'dictionary/index.md' %} bg-blue-600 text-white {% else %} bg-white text-gray-700 hover:bg-gray-100 {% endif %}
+                rounded-l-md">
+        Sort by Morpheme
+      </a>
+      <a href="{{ get_url(path='dictionary/index-by-gloss', lang=lang) }}"
+         class="px-4 py-2 text-sm font-medium border border-gray-300 
+                {% if page.path == 'dictionary/by-morpheme.md' %} bg-blue-600 text-white {% else %} bg-white text-gray-700 hover:bg-gray-100 {% endif %}
+                rounded-r-md">
+        Sort by Gloss
+      </a>
+    </div>
+  </div>
+  {{ page.content | safe }}
+</div>
+{% endblock content %}

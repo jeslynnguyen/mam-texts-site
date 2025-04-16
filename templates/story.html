@@ -1,0 +1,113 @@
+{% extends "base.html" %} {% block content %}
+{% set story_data = load_data(path="/stories/" ~ page.extra.story_file) %}
+{% set data = load_data(path="/stories/" ~ page.extra.file) %}
+{% set cur_story = story_data %}
+
+{% set cur_story = story_data.rows | filter(attribute="id", value=page.extra.story_id | as_str) | nth(n=0) %}
+{% set cur_title = trans(key="story_title", lang=lang) %}
+{% set cur_trans = trans(key="sentences_translation", lang=lang) %}
+{% set cur_gloss = trans(key="glosses_translation", lang=lang) %}
+
+<h1 class="title">{{ cur_story.value[cur_title] }}</h1>
+<p> {{trans(key="by", lang=lang)}} {{cur_story.value.author}} </p>
+
+
+<div class="flex">
+  <p class="font-semibold mr-2 text-md">{{trans(key="view_option", lang=lang)}}</p>
+  <div class="flex items-center me-4">
+      <input id="defaultViewButton" type="radio" value="default" name="storyViewGroup" class="w-5 h-5 border-gray-300" checked>
+      <label for="defaultViewButton" class="ms-2 text-md font-medium">{{trans(key="default_view", lang=lang)}}</label>
+  </div>
+  <div class="flex items-center me-4">
+      <input id="orthoViewButton" type="radio" value="ortho" name="storyViewGroup" class="w-5 h-5 border-gray-300">
+      <label for="orthoViewButton" class="ms-2 text-md font-medium">{{trans(key="ortho_gloss", lang=lang)}}</label>
+  </div>
+  <div class="flex items-center me-4">
+      <input id="ipaViewButton" type="radio" value="ipa" name="storyViewGroup" class="w-5 h-5 border-gray-300">
+      <label for="ipaViewButton" class="ms-2 text-md font-medium">{{trans(key="ipa_gloss", lang=lang)}}</label>
+  </div>
+  <div class="flex items-center">
+      <input id="storyViewButton" type="radio" value="story" name="storyViewGroup" class="w-5 h-5 border-gray-300">
+      <label for="storyViewButton" class="ms-2 text-md font-medium">{{trans(key="story_view", lang=lang)}}<label>
+  </div>
+</div>
+
+
+<div class="aspect-w-16 aspect-h-9 border-2 border-gray-400">
+{% for story in story_data.rows %}
+  {% if story.id | int == page.extra.story_id %}
+    <iframe src="{{story.value.link}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+  {% endif %}
+{% endfor %}
+</div>
+
+{# Default View #}
+
+<div id="default">
+{% for row in data.rows %}
+  {% if row.value.story | int == page.extra.story_id %}
+    <p class="font-semibold">{{ row.value.sentence.orthography }}</p>
+    <p class="pb-3">{{ row.value.sentence[cur_trans] }}</p>
+  {% endif %}
+{% endfor %}
+</div>
+
+{# Story View #}
+
+<div id="story">
+  <div class="grid grid-cols-2 gap-x-4">
+    <h2>Atchan</h2>
+    <h2>{{trans(key="lang_name", lang=lang)}}</h2>
+    {% for row in data.rows %}
+      {% if row.value.story | int == page.extra.story_id %}
+        <p class="pb-3">{{ row.value.sentence.orthography }}</p>
+        <p class="pb-3">{{ row.value.sentence[cur_trans] }}</p>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{# Orthography Gloss View #}
+
+<div id="ortho">
+  {% for row in data.rows %}
+    {% if row.value.story | int == page.extra.story_id %}
+      <p class="font-semibold">{{ row.value.sentence.orthography }}</p>
+      {% set gloss = row.value.sentence[cur_gloss] | split(pat=" ") %}
+      {% set ortho = row.value.sentence.orthography | split(pat=" ") %}
+      <div class="flex flex-row text-left gap-2">
+        {% for word in gloss %}
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> {{ ortho[loop.index0] }} </p>
+                <p> {{ word }} </p>
+            </div>
+          {% endfor %}
+        </div>
+      <p class="pb-3">{{ row.value.sentence[cur_trans] }}</p>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{# IPA Gloss View #}
+
+<div id="ipa">
+  {% for row in data.rows %}
+    {% if row.value.story | int == page.extra.story_id %}
+      <p class="font-semibold">{{ row.value.sentence.orthography }}</p>
+      {% set gloss = row.value.sentence[cur_gloss] | split(pat=" ") %}
+      {% set ipa = row.value.sentence.morphemes | split(pat=" ") %}
+      <div class="flex flex-row text-left gap-2">
+        {% for word in gloss %}
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> {{ ipa[loop.index0] }} </p>
+              <p> {{ word }} </p>
+            </div>
+          {% endfor %}
+        </div>
+      <p class="pb-3">{{ row.value.sentence[cur_trans] }}</p>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<script type="text/javascript" src= "{{ get_url(path="/js/storyViewToggle.js") }}"></script>
+{{ page.content | safe }} {% endblock content %}

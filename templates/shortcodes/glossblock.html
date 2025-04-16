@@ -1,0 +1,20 @@
+{% set lines = body | split(pat="\n") %} {% set original = lines | first %} {%
+set morphemes = lines | nth(n=1) | split(pat=" ") %} {% set glosses = lines |
+nth(n=2) | split(pat=" ") %} {% set translation = lines | last %}
+
+<div class="gloss-container" aria-label="Interlinear gloss" id="elementToHide">
+    <p class="original-text" aria-label="Original text">{{ original }}</p>
+
+    <div class="gloss-line" aria-label="Morpheme-by-morpheme gloss">
+        {% for morpheme in morphemes %}
+        <ruby>
+            {{ morpheme }}
+            <rt aria-label="Gloss for '{{ morpheme }}'"
+                >{{ glosses | nth(n=loop.index0) }}</rt
+            >
+        </ruby>
+        {% endfor %}
+    </div>
+
+    <p class="translation" aria-label="Translation">{{ translation }}</p>
+</div>
