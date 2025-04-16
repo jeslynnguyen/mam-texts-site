@@ -19,10 +19,7 @@ default_language = "en"
 highlight_code = false
 
 [languages.en]
-title = "Mam Texts"
 build_search_index = true
-content_dir = "content/en"
-home = "_index.en.md"  # English homepage
 
 [languages.en.translations]
 language = "Language"
@@ -46,8 +43,6 @@ story_title = "name"
 [languages.es]
 title = "Mam Texts - Español"
 build_search_index = true
-content_dir = "content/es"
-home = "_index.es.md"  # Spanish homepage
 
 [languages.es.translations]
 language = "Idioma"
