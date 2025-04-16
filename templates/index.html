@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-{{ section.content | safe }}
+  {{ section.content | safe }}
+
+  <a href="{{ get_url(path='texts/') }}">Texts</a>
+  <a href="{{ page.lang | url_for }}">{{ page.lang == 'en' and 'Español' or 'English' }}</a>
 {% endblock content %}
-
-<a href="{{ page.lang | url_for }}">{{ page.lang == 'en' and 'Español' or 'English' }}</a>
-
