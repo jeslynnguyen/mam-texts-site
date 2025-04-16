@@ -3,9 +3,9 @@ title = "Home"
 template = "index.html"
 +++
 
-# Atchan Song and Story Corpus
+# Mam Texts
 
-## ÁCAN NANMƐ LÊ ÁLƐ́BHƆ́
+## INSERT SPANISH
 
 {{ images(img1="/images/Anono_street.jpg", img2="/images/Blockhauss_ceremony.jpg") }}
 
