@@ -7,7 +7,7 @@
   <!-- <title>{% block title %}{% if page %}{{ page.title }}{% else %}{{ section.title }}{% endif %}{% endblock title %} | {{config.title}}</title> -->
   <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="icon" href="/images/favicon-3.ico" />
+  <link rel="icon" href="{{ get_url(path="images/favicon-3.ico") }}" />
   <title> Mam Texts </title> 
 </head>
 
@@ -16,7 +16,7 @@
   <div id="content-wrapper" class="flex-1 flex flex-col mx-auto max-w-3xl px-2 sm:px-6 lg:px-8 gap-4 relative">
     {% block content %} {% endblock %}
   </div>
-  <script type="text/javascript" src="{{ get_url(path="/js/toggle.js") }}"></script>
+  <script type="text/javascript" src="{{ get_url(path="js/toggle.js") }}"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

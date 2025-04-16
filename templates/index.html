@@ -3,5 +3,11 @@
   {{ section.content | safe }}
 
   <a href="{{ get_url(path='texts/') }}">Texts</a>
-  <a href="{{ page.lang | url_for }}">{{ page.lang == 'en' and 'Español' or 'English' }}</a>
+
+  {% if lang == "en" %}
+    <a href="{{ get_url(path="", lang="es") }}">Español</a>
+  {% else %}
+    <a href="{{ get_url(path="", lang="en") }}">English</a>
+  {% endif %}
+
 {% endblock content %}

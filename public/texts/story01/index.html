@@ -1,0 +1,3918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <title> | Mam Texts</title> -->
+  <link rel="stylesheet" href="https://jeslynnguyen.github.io/mam-texts-site/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="icon" href="https://jeslynnguyen.github.io/mam-texts-site/images/favicon-3.ico" />
+  <title> Mam Texts </title> 
+</head>
+
+<body>
+  <nav id="navbar" class="sticky top-0 z-10 bg-slate-100 border-b-2 border-gray-300 mb-2">
+    <!-- TODO: improve small screen UX by adding menu button when screen is small -->
+  <div class="mx-auto max-w-3xl px-2 sm:px-4 lg:px-6">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="flex space-x-0">
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Home</a>
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/orthography" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Orthography</a>
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/texts" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Texts</a>
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/project-members" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Project Members</a>
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/storytellers" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Storytellers</a>
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/dictionary" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Dictionary</a>
+      </div>
+
+      <div class="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0" id="langSwitcher" >
+          <!-- Language dropdown -->
+        <div class="relative ml-3">
+          <div>
+            <button type="button" class="block rounded-t-md rounded-l-md text-black font-medium px-3 py-2 text-base" id="langButton" aria-expanded="false" aria-haspopup="true">
+              <span class="sr-only">Open language switcher</span>
+              Language <i class="bi bi-caret-down-fill"></i>
+            </button>
+          </div>
+
+          <!-- Possible TODO: add a transition here via editing toggle.js -->
+
+          <div class="absolute top-8 right-0 z-10 mt-2 w-24 rounded-b-md bg-white py-1 border-2 border-slate-300" role="menu" id="langMenu" aria-orientation="vertical" aria-labelledby="lang-menu-button" tabindex="-1">
+              
+              
+                
+              
+
+              
+                
+                  <a href="https:&#x2F;&#x2F;jeslynnguyen.github.io&#x2F;mam-texts-site&#x2F;texts&#x2F;story01&#x2F;" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-1">English</a>
+                
+                  <a href="https:&#x2F;&#x2F;jeslynnguyen.github.io&#x2F;mam-texts-site&#x2F;es&#x2F;texts&#x2F;story01&#x2F;" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-2">Español</a>
+                
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="content-wrapper" class="flex-1 flex flex-col mx-auto max-w-3xl px-2 sm:px-6 lg:px-8 gap-4 relative">
+    
+
+
+
+
+
+
+
+
+
+<h1 class="title">Mam conversation 2</h1>
+<p> by Madame Sidonie Mobio </p>
+
+
+<div class="flex">
+  <p class="font-semibold mr-2 text-md">View options</p>
+  <div class="flex items-center me-4">
+      <input id="defaultViewButton" type="radio" value="default" name="storyViewGroup" class="w-5 h-5 border-gray-300" checked>
+      <label for="defaultViewButton" class="ms-2 text-md font-medium">Default</label>
+  </div>
+  <div class="flex items-center me-4">
+      <input id="orthoViewButton" type="radio" value="ortho" name="storyViewGroup" class="w-5 h-5 border-gray-300">
+      <label for="orthoViewButton" class="ms-2 text-md font-medium">Orthographic gloss</label>
+  </div>
+  <div class="flex items-center me-4">
+      <input id="ipaViewButton" type="radio" value="ipa" name="storyViewGroup" class="w-5 h-5 border-gray-300">
+      <label for="ipaViewButton" class="ms-2 text-md font-medium">IPA gloss</label>
+  </div>
+  <div class="flex items-center">
+      <input id="storyViewButton" type="radio" value="story" name="storyViewGroup" class="w-5 h-5 border-gray-300">
+      <label for="storyViewButton" class="ms-2 text-md font-medium">Story<label>
+  </div>
+</div>
+
+
+<div class="aspect-w-16 aspect-h-9 border-2 border-gray-400">
+
+  
+
+  
+    <iframe src="https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;on-h1WJdVog?si=M7Pn3f_dMED5cZZI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+  
+
+  
+
+</div>
+
+
+
+<div id="default">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <p class="font-semibold">l\&#x27;o jɔn-sɛn khúbhɛ́</p>
+    <p class="pb-3">In Côte d&#x27;Ivoire,</p>
+  
+
+  
+    <p class="font-semibold">gángán mɛ́n ń ma ń ma (e)</p>
+    <p class="pb-3">when the white man came,</p>
+  
+
+  
+    <p class="font-semibold">áyí khɛ́n án che super li áyí créncré</p>
+    <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+  
+
+  
+    <p class="font-semibold">ló jɔn-sɛn khúbhɛ́</p>
+    <p class="pb-3">In Côte d&#x27;Ivoire,</p>
+  
+
+  
+    <p class="font-semibold">gán-gán mɛ́n ń ma ń ma (e)</p>
+    <p class="pb-3">when the white man came,</p>
+  
+
+  
+    <p class="font-semibold">áyí khɛ́n án che super li áyí créncré</p>
+    <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+  
+
+  
+    <p class="font-semibold">áyí khɛ́n án che super li áyí créncré</p>
+    <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+  
+
+  
+    <p class="font-semibold">ncɛ́n nɔ̂n a li ló bicɔ (e)</p>
+    <p class="pb-3">Today is a good day,</p>
+  
+
+  
+    <p class="font-semibold">ńmyébhyɔ́ super ebhá</p>
+    <p class="pb-3">the super girls are coming.</p>
+  
+
+  
+    <p class="font-semibold">hɔ́n thándi ɔ́n ma wú wo</p>
+    <p class="pb-3">Go out, come see them!</p>
+  
+
+  
+    <p class="font-semibold">áyí án che super li áyí créncré</p>
+    <p class="pb-3">What he calls &#x27;super&#x27; is what&#x27;s great.</p>
+  
+
+  
+    <p class="font-semibold">ncɛ́n nɔ́n á li ló bicɔ ɛ</p>
+    <p class="pb-3">Today is a good day,</p>
+  
+
+  
+    <p class="font-semibold">ńmyébhyɔ́ super ebhá</p>
+    <p class="pb-3">the super girls are coming.</p>
+  
+
+  
+    <p class="font-semibold">hɔ́n thándi ɔ́n ma wú wo</p>
+    <p class="pb-3">Go out, come see them!</p>
+  
+
+  
+    <p class="font-semibold">ló Tchagba Dogba myébhyɔ́ (e)</p>
+    <p class="pb-3">The Tchagba Dogba girls,</p>
+  
+
+  
+    <p class="font-semibold">lo énɛn si lo ebhá (e)</p>
+    <p class="pb-3">we are coming walking.</p>
+  
+
+  
+    <p class="font-semibold">lo hɛ́nmɛn mɛn lɔ super</p>
+    <p class="pb-3">Our fronts are super,</p>
+  
+
+  
+    <p class="font-semibold">lo mánji mɛn lɔ super</p>
+    <p class="pb-3">our backs are super too.</p>
+  
+
+  
+    <p class="font-semibold">lo bhwetɔ́ mɛn lɔ super</p>
+    <p class="pb-3">The way we talk is super too.</p>
+  
+
+  
+    <p class="font-semibold">lo lyaphí mɛn lɔ super</p>
+    <p class="pb-3">The way we laugh is super too.</p>
+  
+
+  
+    <p class="font-semibold">lo yítɛ́ mɛn lɔ super</p>
+    <p class="pb-3">The way we do things is super too.</p>
+  
+
+  
+    <p class="font-semibold">lo dɛgɔn mɛn lɔ super</p>
+    <p class="pb-3">Our pagne (fabric) is also super.</p>
+  
+
+  
+    <p class="font-semibold">lo ngbawa mɛn lɔ super</p>
+    <p class="pb-3">Our shoes are also super.</p>
+  
+
+  
+    <p class="font-semibold">ló Tchagba Dogba myébhyɔ́ ɛ</p>
+    <p class="pb-3">The Tchagba Dogba girls,</p>
+  
+
+  
+    <p class="font-semibold">wo énɛn si wo e-bhá ɛ</p>
+    <p class="pb-3">they are coming walking.</p>
+  
+
+  
+    <p class="font-semibold">wo hɛ́nmɛn mɛn lɔ super</p>
+    <p class="pb-3">Their fronts are super,</p>
+  
+
+  
+    <p class="font-semibold">wo mánji mɛn lɔ super</p>
+    <p class="pb-3">their backs are super too.</p>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+
+<div id="story">
+  <div class="grid grid-cols-2 gap-x-4">
+    <h2>Atchan</h2>
+    <h2>English</h2>
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <p class="pb-3">l\&#x27;o jɔn-sɛn khúbhɛ́</p>
+        <p class="pb-3">In Côte d&#x27;Ivoire,</p>
+      
+    
+      
+        <p class="pb-3">gángán mɛ́n ń ma ń ma (e)</p>
+        <p class="pb-3">when the white man came,</p>
+      
+    
+      
+        <p class="pb-3">áyí khɛ́n án che super li áyí créncré</p>
+        <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+      
+    
+      
+        <p class="pb-3">ló jɔn-sɛn khúbhɛ́</p>
+        <p class="pb-3">In Côte d&#x27;Ivoire,</p>
+      
+    
+      
+        <p class="pb-3">gán-gán mɛ́n ń ma ń ma (e)</p>
+        <p class="pb-3">when the white man came,</p>
+      
+    
+      
+        <p class="pb-3">áyí khɛ́n án che super li áyí créncré</p>
+        <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+      
+    
+      
+        <p class="pb-3">áyí khɛ́n án che super li áyí créncré</p>
+        <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+      
+    
+      
+        <p class="pb-3">ncɛ́n nɔ̂n a li ló bicɔ (e)</p>
+        <p class="pb-3">Today is a good day,</p>
+      
+    
+      
+        <p class="pb-3">ńmyébhyɔ́ super ebhá</p>
+        <p class="pb-3">the super girls are coming.</p>
+      
+    
+      
+        <p class="pb-3">hɔ́n thándi ɔ́n ma wú wo</p>
+        <p class="pb-3">Go out, come see them!</p>
+      
+    
+      
+        <p class="pb-3">áyí án che super li áyí créncré</p>
+        <p class="pb-3">What he calls &#x27;super&#x27; is what&#x27;s great.</p>
+      
+    
+      
+        <p class="pb-3">ncɛ́n nɔ́n á li ló bicɔ ɛ</p>
+        <p class="pb-3">Today is a good day,</p>
+      
+    
+      
+        <p class="pb-3">ńmyébhyɔ́ super ebhá</p>
+        <p class="pb-3">the super girls are coming.</p>
+      
+    
+      
+        <p class="pb-3">hɔ́n thándi ɔ́n ma wú wo</p>
+        <p class="pb-3">Go out, come see them!</p>
+      
+    
+      
+        <p class="pb-3">ló Tchagba Dogba myébhyɔ́ (e)</p>
+        <p class="pb-3">The Tchagba Dogba girls,</p>
+      
+    
+      
+        <p class="pb-3">lo énɛn si lo ebhá (e)</p>
+        <p class="pb-3">we are coming walking.</p>
+      
+    
+      
+        <p class="pb-3">lo hɛ́nmɛn mɛn lɔ super</p>
+        <p class="pb-3">Our fronts are super,</p>
+      
+    
+      
+        <p class="pb-3">lo mánji mɛn lɔ super</p>
+        <p class="pb-3">our backs are super too.</p>
+      
+    
+      
+        <p class="pb-3">lo bhwetɔ́ mɛn lɔ super</p>
+        <p class="pb-3">The way we talk is super too.</p>
+      
+    
+      
+        <p class="pb-3">lo lyaphí mɛn lɔ super</p>
+        <p class="pb-3">The way we laugh is super too.</p>
+      
+    
+      
+        <p class="pb-3">lo yítɛ́ mɛn lɔ super</p>
+        <p class="pb-3">The way we do things is super too.</p>
+      
+    
+      
+        <p class="pb-3">lo dɛgɔn mɛn lɔ super</p>
+        <p class="pb-3">Our pagne (fabric) is also super.</p>
+      
+    
+      
+        <p class="pb-3">lo ngbawa mɛn lɔ super</p>
+        <p class="pb-3">Our shoes are also super.</p>
+      
+    
+      
+        <p class="pb-3">ló Tchagba Dogba myébhyɔ́ ɛ</p>
+        <p class="pb-3">The Tchagba Dogba girls,</p>
+      
+    
+      
+        <p class="pb-3">wo énɛn si wo e-bhá ɛ</p>
+        <p class="pb-3">they are coming walking.</p>
+      
+    
+      
+        <p class="pb-3">wo hɛ́nmɛn mɛn lɔ super</p>
+        <p class="pb-3">Their fronts are super,</p>
+      
+    
+      
+        <p class="pb-3">wo mánji mɛn lɔ super</p>
+        <p class="pb-3">their backs are super too.</p>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+<div id="ortho">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <p class="font-semibold">l\&#x27;o jɔn-sɛn khúbhɛ́</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> l\&#x27;o </p>
+                <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> jɔn-sɛn </p>
+                <p> elephant-tusk </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> khúbhɛ́ </p>
+                <p> village </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">In Côte d&#x27;Ivoire,</p>
+    
+  
+    
+      <p class="font-semibold">gángán mɛ́n ń ma ń ma (e)</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> gángán </p>
+                <p> white.person </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛ́n </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ń </p>
+                <p> 3sg.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ma </p>
+                <p> come.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ń </p>
+                <p> 3sg.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ma </p>
+                <p> come.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> (e) </p>
+                <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">when the white man came,</p>
+    
+  
+    
+      <p class="font-semibold">áyí khɛ́n án che super li áyí créncré</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> áyí </p>
+                <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> khɛ́n </p>
+                <p> rel </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> án </p>
+                <p> 3sg.ipfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> che </p>
+                <p> call </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> li </p>
+                <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> áyí </p>
+                <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> créncré </p>
+                <p> mighty </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+    
+  
+    
+      <p class="font-semibold">ló jɔn-sɛn khúbhɛ́</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ló </p>
+                <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> jɔn-sɛn </p>
+                <p> elephant-tusk </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> khúbhɛ́ </p>
+                <p> village </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">In Côte d&#x27;Ivoire,</p>
+    
+  
+    
+      <p class="font-semibold">gán-gán mɛ́n ń ma ń ma (e)</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> gán-gán </p>
+                <p> white.person </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛ́n </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ń </p>
+                <p> 3sg.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ma </p>
+                <p> come.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ń </p>
+                <p> 3sg.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ma </p>
+                <p> come.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> (e) </p>
+                <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">when the white man came,</p>
+    
+  
+    
+      <p class="font-semibold">áyí khɛ́n án che super li áyí créncré</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> áyí </p>
+                <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> khɛ́n </p>
+                <p> rel </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> án </p>
+                <p> 3sg.ipfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> che </p>
+                <p> call </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> li </p>
+                <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> áyí </p>
+                <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> créncré </p>
+                <p> mighty </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+    
+  
+    
+      <p class="font-semibold">áyí khɛ́n án che super li áyí créncré</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> áyí </p>
+                <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> khɛ́n </p>
+                <p> rel </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> án </p>
+                <p> 3sg.ipfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> che </p>
+                <p> call </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> li </p>
+                <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> áyí </p>
+                <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> créncré </p>
+                <p> mighty </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+    
+  
+    
+      <p class="font-semibold">ncɛ́n nɔ̂n a li ló bicɔ (e)</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ncɛ́n </p>
+                <p> cm-today </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> nɔ̂n </p>
+                <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> a </p>
+                <p> 3.inan </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> li </p>
+                <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ló </p>
+                <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> bicɔ </p>
+                <p> good.day </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> (e) </p>
+                <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Today is a good day,</p>
+    
+  
+    
+      <p class="font-semibold">ńmyébhyɔ́ super ebhá</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ńmyébhyɔ́ </p>
+                <p> pl-woman-child </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ebhá </p>
+                <p> prog-come </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">the super girls are coming.</p>
+    
+  
+    
+      <p class="font-semibold">hɔ́n thándi ɔ́n ma wú wo</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɔ́n </p>
+                <p> 2pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> thándi </p>
+                <p> leave </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɔ́n </p>
+                <p> 2pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ma </p>
+                <p> come </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> wú </p>
+                <p> see </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> wo </p>
+                <p> 3pl.str </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Go out, come see them!</p>
+    
+  
+    
+      <p class="font-semibold">áyí án che super li áyí créncré</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> áyí </p>
+                <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> án </p>
+                <p> 3sg.ipfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> che </p>
+                <p> call </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> li </p>
+                <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> áyí </p>
+                <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> créncré </p>
+                <p> mighty </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">What he calls &#x27;super&#x27; is what&#x27;s great.</p>
+    
+  
+    
+      <p class="font-semibold">ncɛ́n nɔ́n á li ló bicɔ ɛ</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ncɛ́n </p>
+                <p> cm-today </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> nɔ́n </p>
+                <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> á </p>
+                <p> 3.inan </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> li </p>
+                <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ló </p>
+                <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> bicɔ </p>
+                <p> good.day </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɛ </p>
+                <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Today is a good day,</p>
+    
+  
+    
+      <p class="font-semibold">ńmyébhyɔ́ super ebhá</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ńmyébhyɔ́ </p>
+                <p> pl-woman-child </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ebhá </p>
+                <p> prog-come </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">the super girls are coming.</p>
+    
+  
+    
+      <p class="font-semibold">hɔ́n thándi ɔ́n ma wú wo</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɔ́n </p>
+                <p> 2pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> thándi </p>
+                <p> leave </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɔ́n </p>
+                <p> 2pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ma </p>
+                <p> come </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> wú </p>
+                <p> see </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> wo </p>
+                <p> 3pl </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Go out, come see them!</p>
+    
+  
+    
+      <p class="font-semibold">ló Tchagba Dogba myébhyɔ́ (e)</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ló </p>
+                <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> Tchagba </p>
+                <p> Tchagba </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> Dogba </p>
+                <p> Dogba </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> myébhyɔ́ </p>
+                <p> woman.pl-child </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> (e) </p>
+                <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The Tchagba Dogba girls,</p>
+    
+  
+    
+      <p class="font-semibold">lo énɛn si lo ebhá (e)</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lo </p>
+                <p> 1pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> énɛn </p>
+                <p> prog-walk </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> si </p>
+                <p> part </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lo </p>
+                <p> 1pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ebhá </p>
+                <p> prog-come </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> (e) </p>
+                <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">we are coming walking.</p>
+    
+  
+    
+      <p class="font-semibold">lo hɛ́nmɛn mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lo </p>
+                <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɛ́nmɛn </p>
+                <p> front </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛn </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lɔ </p>
+                <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Our fronts are super,</p>
+    
+  
+    
+      <p class="font-semibold">lo mánji mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lo </p>
+                <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mánji </p>
+                <p> behind </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛn </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lɔ </p>
+                <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">our backs are super too.</p>
+    
+  
+    
+      <p class="font-semibold">lo bhwetɔ́ mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lo </p>
+                <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> bhwetɔ́ </p>
+                <p> word-say.nmlz </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛn </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lɔ </p>
+                <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The way we talk is super too.</p>
+    
+  
+    
+      <p class="font-semibold">lo lyaphí mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lo </p>
+                <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lyaphí </p>
+                <p> part-laugh.nmlz </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛn </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lɔ </p>
+                <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The way we laugh is super too.</p>
+    
+  
+    
+      <p class="font-semibold">lo yítɛ́ mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lo </p>
+                <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> yítɛ́ </p>
+                <p> thing-do.nmlz </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛn </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lɔ </p>
+                <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The way we do things is super too.</p>
+    
+  
+    
+      <p class="font-semibold">lo dɛgɔn mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lo </p>
+                <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> dɛgɔn </p>
+                <p> pagne </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛn </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lɔ </p>
+                <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Our pagne (fabric) is also super.</p>
+    
+  
+    
+      <p class="font-semibold">lo ngbawa mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lo </p>
+                <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ngbawa </p>
+                <p> shoes </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛn </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lɔ </p>
+                <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Our shoes are also super.</p>
+    
+  
+    
+      <p class="font-semibold">ló Tchagba Dogba myébhyɔ́ ɛ</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ló </p>
+                <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> Tchagba </p>
+                <p> Tchagba </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> Dogba </p>
+                <p> Dogba </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> myébhyɔ́ </p>
+                <p> woman.pl-child </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɛ </p>
+                <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The Tchagba Dogba girls,</p>
+    
+  
+    
+      <p class="font-semibold">wo énɛn si wo e-bhá ɛ</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> wo </p>
+                <p> 3pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> énɛn </p>
+                <p> prog-walk </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> si </p>
+                <p> part </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> wo </p>
+                <p> 3pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> e-bhá </p>
+                <p> prog-come </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɛ </p>
+                <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">they are coming walking.</p>
+    
+  
+    
+      <p class="font-semibold">wo hɛ́nmɛn mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> wo </p>
+                <p> 3pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɛ́nmɛn </p>
+                <p> front </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛn </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lɔ </p>
+                <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Their fronts are super,</p>
+    
+  
+    
+      <p class="font-semibold">wo mánji mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> wo </p>
+                <p> 3pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mánji </p>
+                <p> back </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɛn </p>
+                <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lɔ </p>
+                <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> super </p>
+                <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">their backs are super too.</p>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+
+
+<div id="ipa">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <p class="font-semibold">l\&#x27;o jɔn-sɛn khúbhɛ́</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ló </p>
+              <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɟɔ̃-sɛ̃ </p>
+              <p> elephant-tusk </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> khúɓɛ́ </p>
+              <p> village </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">In Côte d&#x27;Ivoire,</p>
+    
+  
+    
+      <p class="font-semibold">gángán mɛ́n ń ma ń ma (e)</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɡã́-ɡã́ </p>
+              <p> white.person </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃́ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ̃́ </p>
+              <p> 3sg.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ma </p>
+              <p> come.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ̃́ </p>
+              <p> 3sg.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ma </p>
+              <p> come.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> e </p>
+              <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">when the white man came,</p>
+    
+  
+    
+      <p class="font-semibold">áyí khɛ́n án che super li áyí créncré</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á-jí </p>
+              <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> khɛ̃́ </p>
+              <p> rel </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ã́ </p>
+              <p> 3sg.ipfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> che </p>
+              <p> call </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɗi </p>
+              <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á-jí </p>
+              <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɲcréɲcré </p>
+              <p> mighty </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+    
+  
+    
+      <p class="font-semibold">ló jɔn-sɛn khúbhɛ́</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ló </p>
+              <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɟɔ̃-sɛ̃ </p>
+              <p> elephant-tusk </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> khúɓɛ́ </p>
+              <p> village </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">In Côte d&#x27;Ivoire,</p>
+    
+  
+    
+      <p class="font-semibold">gán-gán mɛ́n ń ma ń ma (e)</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɡã́ɡã́ </p>
+              <p> white.person </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃́ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ̃́ </p>
+              <p> 3sg.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ma </p>
+              <p> come.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ̃́ </p>
+              <p> 3sg.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ma </p>
+              <p> come.pfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> e </p>
+              <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">when the white man came,</p>
+    
+  
+    
+      <p class="font-semibold">áyí khɛ́n án che super li áyí créncré</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á-jí </p>
+              <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> khɛ̃́ </p>
+              <p> rel </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ã́ </p>
+              <p> 3sg.ipfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> che </p>
+              <p> call </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɗi </p>
+              <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á-jí </p>
+              <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɲcréɲcré </p>
+              <p> mighty </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+    
+  
+    
+      <p class="font-semibold">áyí khɛ́n án che super li áyí créncré</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á-jí </p>
+              <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> khɛ̃́ </p>
+              <p> rel </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ã́ </p>
+              <p> 3sg.ipfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> che </p>
+              <p> call </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɗi </p>
+              <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á-jí </p>
+              <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɲcréɲcré </p>
+              <p> mighty </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">what he calls &#x27;super&#x27; is what&#x27;s great.</p>
+    
+  
+    
+      <p class="font-semibold">ncɛ́n nɔ̂n a li ló bicɔ (e)</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ̃-ɲcɛ̃́ </p>
+              <p> cm-today </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> nɔ̃́ </p>
+              <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> a </p>
+              <p> 3.inan </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> li </p>
+              <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ló </p>
+              <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> bicɔ </p>
+              <p> good.day </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> e </p>
+              <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Today is a good day,</p>
+    
+  
+    
+      <p class="font-semibold">ńmyébhyɔ́ super ebhá</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ̃́-mje-ɓjɔ́ </p>
+              <p> pl-woman-child </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> e-ɓá </p>
+              <p> prog-come </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">the super girls are coming.</p>
+    
+  
+    
+      <p class="font-semibold">hɔ́n thándi ɔ́n ma wú wo</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɔ̃́ </p>
+              <p> 2pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> thã́ndi </p>
+              <p> leave </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɔ̃́ </p>
+              <p> 2pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ma </p>
+              <p> come </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> wú </p>
+              <p> see </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> wo </p>
+              <p> 3pl.str </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Go out, come see them!</p>
+    
+  
+    
+      <p class="font-semibold">áyí án che super li áyí créncré</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á-jí </p>
+              <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ã́ </p>
+              <p> 3sg.ipfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> che </p>
+              <p> call </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɗi </p>
+              <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á-jí </p>
+              <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> créɲcré </p>
+              <p> mighty </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">What he calls &#x27;super&#x27; is what&#x27;s great.</p>
+    
+  
+    
+      <p class="font-semibold">ncɛ́n nɔ́n á li ló bicɔ ɛ</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ̃-ɲcɛ̃́ </p>
+              <p> cm-today </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> nɔ̃́ </p>
+              <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á </p>
+              <p> 3.inan </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɗi </p>
+              <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ló </p>
+              <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> bicɔ </p>
+              <p> good.day </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ </p>
+              <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Today is a good day,</p>
+    
+  
+    
+      <p class="font-semibold">ńmyébhyɔ́ super ebhá</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ̃́-mje-ɓjɔ́ </p>
+              <p> pl-woman-child </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> e-ɓá </p>
+              <p> prog-come </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">the super girls are coming.</p>
+    
+  
+    
+      <p class="font-semibold">hɔ́n thándi ɔ́n ma wú wo</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɔ̃́ </p>
+              <p> 2pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> thã́ndi </p>
+              <p> leave </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɔ̃́ </p>
+              <p> 2pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ma </p>
+              <p> come </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> wú </p>
+              <p> see </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> wo </p>
+              <p> 3pl </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Go out, come see them!</p>
+    
+  
+    
+      <p class="font-semibold">ló Tchagba Dogba myébhyɔ́ (e)</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ló </p>
+              <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> cháɡba </p>
+              <p> Tchagba </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> dɔɡba </p>
+              <p> Dogba </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mje-ɓjɔ́ </p>
+              <p> woman.pl-child </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> e </p>
+              <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The Tchagba Dogba girls,</p>
+    
+  
+    
+      <p class="font-semibold">lo énɛn si lo ebhá (e)</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lo </p>
+              <p> 1pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> é-nɛ̃ </p>
+              <p> prog-walk </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> si </p>
+              <p> part </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lo </p>
+              <p> 1pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> e-ɓá </p>
+              <p> prog-come </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> e </p>
+              <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">we are coming walking.</p>
+    
+  
+    
+      <p class="font-semibold">lo hɛ́nmɛn mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lo </p>
+              <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɛ̃́mɛ̃ </p>
+              <p> front </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lɔ </p>
+              <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Our fronts are super,</p>
+    
+  
+    
+      <p class="font-semibold">lo mánji mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lo </p>
+              <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mã́ɲɟi </p>
+              <p> behind </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lɔ </p>
+              <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">our backs are super too.</p>
+    
+  
+    
+      <p class="font-semibold">lo bhwetɔ́ mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lo </p>
+              <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɓwe-tɔ́ </p>
+              <p> word-say.nmlz </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lɔ </p>
+              <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The way we talk is super too.</p>
+    
+  
+    
+      <p class="font-semibold">lo lyaphí mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lo </p>
+              <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɗja-phí </p>
+              <p> part-laugh.nmlz </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lɔ </p>
+              <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The way we laugh is super too.</p>
+    
+  
+    
+      <p class="font-semibold">lo yítɛ́ mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lo </p>
+              <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> jí-tɛ́ </p>
+              <p> thing-do.nmlz </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lɔ </p>
+              <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The way we do things is super too.</p>
+    
+  
+    
+      <p class="font-semibold">lo dɛgɔn mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lo </p>
+              <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> dɛɡɔ̃ </p>
+              <p> pagne </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lɔ </p>
+              <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Our pagne (fabric) is also super.</p>
+    
+  
+    
+      <p class="font-semibold">lo ngbawa mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lo </p>
+              <p> 1pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ŋɡbawa </p>
+              <p> shoes </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lɔ </p>
+              <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Our shoes are also super.</p>
+    
+  
+    
+      <p class="font-semibold">ló Tchagba Dogba myébhyɔ́ ɛ</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ló </p>
+              <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> cháɡba </p>
+              <p> Tchagba </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> dɔɡba </p>
+              <p> Dogba </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mjé-ɓjɔ́ </p>
+              <p> woman.pl-child </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ </p>
+              <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The Tchagba Dogba girls,</p>
+    
+  
+    
+      <p class="font-semibold">wo énɛn si wo e-bhá ɛ</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> wo </p>
+              <p> 3pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> é-nɛ̃ </p>
+              <p> prog-walk </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> si </p>
+              <p> part </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> wo </p>
+              <p> 3pl </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> e-ɓá </p>
+              <p> prog-come </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ </p>
+              <p> emph </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">they are coming walking.</p>
+    
+  
+    
+      <p class="font-semibold">wo hɛ́nmɛn mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> wo </p>
+              <p> 3pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɛ̃́mɛ̃ </p>
+              <p> front </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lɔ </p>
+              <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Their fronts are super,</p>
+    
+  
+    
+      <p class="font-semibold">wo mánji mɛn lɔ super</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> wo </p>
+              <p> 3pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mã́ɲɟi </p>
+              <p> back </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɛ̃ </p>
+              <p> 3sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lɔ </p>
+              <p> also </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> super </p>
+              <p> super </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">their backs are super too.</p>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+<script type="text/javascript" src= "https://jeslynnguyen.github.io/mam-texts-site/js/storyViewToggle.js"></script>
+ 
+  </div>
+  <script type="text/javascript" src="https://jeslynnguyen.github.io/mam-texts-site/js/toggle.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <title> | Mam Texts</title> -->
+  <link rel="stylesheet" href="https://jeslynnguyen.github.io/mam-texts-site/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="icon" href="https://jeslynnguyen.github.io/mam-texts-site/images/favicon-3.ico" />
+  <title> Mam Texts </title> 
+</head>
+
+<body>
+  <nav id="navbar" class="sticky top-0 z-10 bg-slate-100 border-b-2 border-gray-300 mb-2">
+    <!-- TODO: improve small screen UX by adding menu button when screen is small -->
+  <div class="mx-auto max-w-3xl px-2 sm:px-4 lg:px-6">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="flex space-x-0">
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Home</a>
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/orthography" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Orthography</a>
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/texts" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Texts</a>
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/project-members" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Project Members</a>
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/storytellers" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Storytellers</a>
+        <a href="https://jeslynnguyen.github.io/mam-texts-site/dictionary" class="block rounded-md hover:bg-gray-300 px-3 py-2 text-base font-medium text-black hover:text-black">Dictionary</a>
+      </div>
+
+      <div class="relative inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0" id="langSwitcher" >
+          <!-- Language dropdown -->
+        <div class="relative ml-3">
+          <div>
+            <button type="button" class="block rounded-t-md rounded-l-md text-black font-medium px-3 py-2 text-base" id="langButton" aria-expanded="false" aria-haspopup="true">
+              <span class="sr-only">Open language switcher</span>
+              Language <i class="bi bi-caret-down-fill"></i>
+            </button>
+          </div>
+
+          <!-- Possible TODO: add a transition here via editing toggle.js -->
+
+          <div class="absolute top-8 right-0 z-10 mt-2 w-24 rounded-b-md bg-white py-1 border-2 border-slate-300" role="menu" id="langMenu" aria-orientation="vertical" aria-labelledby="lang-menu-button" tabindex="-1">
+              
+              
+                
+              
+
+              
+                
+                  <a href="https:&#x2F;&#x2F;jeslynnguyen.github.io&#x2F;mam-texts-site&#x2F;texts&#x2F;story00&#x2F;" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-1">English</a>
+                
+                  <a href="https:&#x2F;&#x2F;jeslynnguyen.github.io&#x2F;mam-texts-site&#x2F;es&#x2F;texts&#x2F;story00&#x2F;" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 hover:text-black" role="menuitem" tabindex="-1" id="user-menu-item-2">Español</a>
+                
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="content-wrapper" class="flex-1 flex flex-col mx-auto max-w-3xl px-2 sm:px-6 lg:px-8 gap-4 relative">
+    
+
+
+
+
+
+
+
+
+
+<h1 class="title">Mam conversation 1</h1>
+<p> by Madame Rosalie N&#x27;Diadan </p>
+
+
+<div class="flex">
+  <p class="font-semibold mr-2 text-md">View options</p>
+  <div class="flex items-center me-4">
+      <input id="defaultViewButton" type="radio" value="default" name="storyViewGroup" class="w-5 h-5 border-gray-300" checked>
+      <label for="defaultViewButton" class="ms-2 text-md font-medium">Default</label>
+  </div>
+  <div class="flex items-center me-4">
+      <input id="orthoViewButton" type="radio" value="ortho" name="storyViewGroup" class="w-5 h-5 border-gray-300">
+      <label for="orthoViewButton" class="ms-2 text-md font-medium">Orthographic gloss</label>
+  </div>
+  <div class="flex items-center me-4">
+      <input id="ipaViewButton" type="radio" value="ipa" name="storyViewGroup" class="w-5 h-5 border-gray-300">
+      <label for="ipaViewButton" class="ms-2 text-md font-medium">IPA gloss</label>
+  </div>
+  <div class="flex items-center">
+      <input id="storyViewButton" type="radio" value="story" name="storyViewGroup" class="w-5 h-5 border-gray-300">
+      <label for="storyViewButton" class="ms-2 text-md font-medium">Story<label>
+  </div>
+</div>
+
+
+<div class="aspect-w-16 aspect-h-9 border-2 border-gray-400">
+
+  
+    <iframe src="https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;ws16NV4VDEE?si=pXsiVGe94yAkZNJI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+  
+
+  
+
+  
+
+</div>
+
+
+
+<div id="default">
+
+  
+    <p class="font-semibold">hɛ yí khúúnbrɛn ɛ tɛ́ á yɔn</p>
+    <p class="pb-3">Everything you do is good,</p>
+  
+
+  
+    <p class="font-semibold">á yɔn á yɔn</p>
+    <p class="pb-3">is good, is good.</p>
+  
+
+  
+    <p class="font-semibold">thábɛn lephan nɔ̂n a bha gɛ yɛ́n hɛ hɛ́nphe ɛ bhú</p>
+    <p class="pb-3">Who can know what you think?</p>
+  
+
+  
+    <p class="font-semibold">thábɛn nɔ̂n a bha gɛ wú hɛ yí ɛ wú</p>
+    <p class="pb-3">Who can see what you see?</p>
+  
+
+  
+    <p class="font-semibold">hɛ nɔ̂n ɛ li áyí khúúnbrɛn óthe</p>
+    <p class="pb-3">It&#x27;s you who is the master of everything.</p>
+  
+
+  
+    <p class="font-semibold">o tɛ bhrɔ́bhrɔ́ bɛn ló khɛ́n brɛ tɛ nɔ̂n a san</p>
+    <p class="pb-3">There are a lot of people but he chooses one.</p>
+  
+
+  
+    <p class="font-semibold">ɔ́n ti bha hɛ́nmɛn ɔ́n ne só khú</p>
+    <p class="pb-3">Approach, do not be afraid !</p>
+  
+
+  
+    <p class="font-semibold">yankan mɔ́n trɛ hɔ́n tho</p>
+    <p class="pb-3">The hand of God is good.</p>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+
+
+<div id="story">
+  <div class="grid grid-cols-2 gap-x-4">
+    <h2>Atchan</h2>
+    <h2>English</h2>
+    
+      
+        <p class="pb-3">hɛ yí khúúnbrɛn ɛ tɛ́ á yɔn</p>
+        <p class="pb-3">Everything you do is good,</p>
+      
+    
+      
+        <p class="pb-3">á yɔn á yɔn</p>
+        <p class="pb-3">is good, is good.</p>
+      
+    
+      
+        <p class="pb-3">thábɛn lephan nɔ̂n a bha gɛ yɛ́n hɛ hɛ́nphe ɛ bhú</p>
+        <p class="pb-3">Who can know what you think?</p>
+      
+    
+      
+        <p class="pb-3">thábɛn nɔ̂n a bha gɛ wú hɛ yí ɛ wú</p>
+        <p class="pb-3">Who can see what you see?</p>
+      
+    
+      
+        <p class="pb-3">hɛ nɔ̂n ɛ li áyí khúúnbrɛn óthe</p>
+        <p class="pb-3">It&#x27;s you who is the master of everything.</p>
+      
+    
+      
+        <p class="pb-3">o tɛ bhrɔ́bhrɔ́ bɛn ló khɛ́n brɛ tɛ nɔ̂n a san</p>
+        <p class="pb-3">There are a lot of people but he chooses one.</p>
+      
+    
+      
+        <p class="pb-3">ɔ́n ti bha hɛ́nmɛn ɔ́n ne só khú</p>
+        <p class="pb-3">Approach, do not be afraid !</p>
+      
+    
+      
+        <p class="pb-3">yankan mɔ́n trɛ hɔ́n tho</p>
+        <p class="pb-3">The hand of God is good.</p>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+<div id="ortho">
+  
+    
+      <p class="font-semibold">hɛ yí khúúnbrɛn ɛ tɛ́ á yɔn</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɛ </p>
+                <p> 2sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> yí </p>
+                <p> thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> khúúnbrɛn </p>
+                <p> all </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɛ </p>
+                <p> 2sg.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> tɛ́ </p>
+                <p> do.ipfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> á </p>
+                <p> 3.inan </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> yɔn </p>
+                <p> be.good </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Everything you do is good,</p>
+    
+  
+    
+      <p class="font-semibold">á yɔn á yɔn</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> á </p>
+                <p> 3.inan </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> yɔn </p>
+                <p> be.good </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> á </p>
+                <p> 3.inan </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> yɔn </p>
+                <p> be.good </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">is good, is good.</p>
+    
+  
+    
+      <p class="font-semibold">thábɛn lephan nɔ̂n a bha gɛ yɛ́n hɛ hɛ́nphe ɛ bhú</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> thábɛn </p>
+                <p> who </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> lephan </p>
+                <p> person </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> nɔ̂n </p>
+                <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> a </p>
+                <p> 3.res </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> bha </p>
+                <p> fut </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> gɛ </p>
+                <p> can </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> yɛ́n </p>
+                <p> know </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɛ </p>
+                <p> 2sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɛ́nphe </p>
+                <p> thought </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɛ </p>
+                <p> 2sg.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> bhú </p>
+                <p> think.ipfv </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Who can know what you think?</p>
+    
+  
+    
+      <p class="font-semibold">thábɛn nɔ̂n a bha gɛ wú hɛ yí ɛ wú</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> thábɛn </p>
+                <p> who </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> nɔ̂n </p>
+                <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> a </p>
+                <p> 3.res </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> bha </p>
+                <p> fut </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> gɛ </p>
+                <p> can </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> wú </p>
+                <p> see </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɛ </p>
+                <p> 2sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> yí </p>
+                <p> thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɛ </p>
+                <p> 2sg.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> wú </p>
+                <p> see.ipfv </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Who can see what you see?</p>
+    
+  
+    
+      <p class="font-semibold">hɛ nɔ̂n ɛ li áyí khúúnbrɛn óthe</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɛ </p>
+                <p> 2sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> nɔ̂n </p>
+                <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɛ </p>
+                <p> 2sg.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> li </p>
+                <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> áyí </p>
+                <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> khúúnbrɛn </p>
+                <p> all </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> óthe </p>
+                <p> con-father </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">It&#x27;s you who is the master of everything.</p>
+    
+  
+    
+      <p class="font-semibold">o tɛ bhrɔ́bhrɔ́ bɛn ló khɛ́n brɛ tɛ nɔ̂n a san</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> o </p>
+                <p> pro.indef </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> tɛ </p>
+                <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> bhrɔ́bhrɔ́ </p>
+                <p> a.lot </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> bɛn </p>
+                <p> indef </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ló </p>
+                <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> khɛ́n </p>
+                <p> rel </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> brɛ </p>
+                <p> one </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> tɛ </p>
+                <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> nɔ̂n </p>
+                <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> a </p>
+                <p> 3.res </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> san </p>
+                <p> choose </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">There are a lot of people but he chooses one.</p>
+    
+  
+    
+      <p class="font-semibold">ɔ́n ti bha hɛ́nmɛn ɔ́n ne só khú</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɔ́n </p>
+                <p> 2pl.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ti </p>
+                <p> approach </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> bha </p>
+                <p> come </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɛ́nmɛn </p>
+                <p> front </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ɔ́n </p>
+                <p> 2pl.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> ne </p>
+                <p> neg </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> só </p>
+                <p> fear </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> khú </p>
+                <p> part </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Approach, do not be afraid !</p>
+    
+  
+    
+      <p class="font-semibold">yankan mɔ́n trɛ hɔ́n tho</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> yankan </p>
+                <p> God </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> mɔ́n </p>
+                <p> hand </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> trɛ </p>
+                <p> stay </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> hɔ́n </p>
+                <p> 2pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+                <p class="font-semibold"> tho </p>
+                <p> top </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The hand of God is good.</p>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+
+
+<div id="ipa">
+  
+    
+      <p class="font-semibold">hɛ yí khúúnbrɛn ɛ tɛ́ á yɔn</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɛ </p>
+              <p> 2sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> jí </p>
+              <p> thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> khúmbrɛ̃ </p>
+              <p> all </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ </p>
+              <p> 2sg.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> tɛ́ </p>
+              <p> do.ipfv </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á </p>
+              <p> 3.inan </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɲɔ̃ </p>
+              <p> be.good </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Everything you do is good,</p>
+    
+  
+    
+      <p class="font-semibold">á yɔn á yɔn</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á </p>
+              <p> 3.inan </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɲɔ̃ </p>
+              <p> be.good </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á </p>
+              <p> 3.inan </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɲɔ̃ </p>
+              <p> be.good </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">is good, is good.</p>
+    
+  
+    
+      <p class="font-semibold">thábɛn lephan nɔ̂n a bha gɛ yɛ́n hɛ hɛ́nphe ɛ bhú</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> thábɛ̃ </p>
+              <p> who </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> lephã </p>
+              <p> person </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> nɔ̃̂ </p>
+              <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> a </p>
+              <p> 3.res </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɓa </p>
+              <p> fut </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɡɛ </p>
+              <p> can </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɲɛ̃́ </p>
+              <p> know </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɛ </p>
+              <p> 2sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɛ̃́mphe </p>
+              <p> thought </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ </p>
+              <p> 2sg.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɓú </p>
+              <p> think.ipfv </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Who can know what you think?</p>
+    
+  
+    
+      <p class="font-semibold">thábɛn nɔ̂n a bha gɛ wú hɛ yí ɛ wú</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> thábɛ̃ </p>
+              <p> who </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> nɔ̃́ </p>
+              <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> a </p>
+              <p> 3.res </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɓa </p>
+              <p> fut </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɡɛ </p>
+              <p> can </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> wú </p>
+              <p> see </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɛ </p>
+              <p> 2sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> jí </p>
+              <p> thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ </p>
+              <p> 2sg.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> wú </p>
+              <p> see.ipfv </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Who can see what you see?</p>
+    
+  
+    
+      <p class="font-semibold">hɛ nɔ̂n ɛ li áyí khúúnbrɛn óthe</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɛ </p>
+              <p> 2sg.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> nɔ̃́ </p>
+              <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɛ </p>
+              <p> 2sg.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɗi </p>
+              <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> á-jí </p>
+              <p> cm-thing </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> khúmbrɛ̃ </p>
+              <p> all </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ó-the </p>
+              <p> con-father </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">It&#x27;s you who is the master of everything.</p>
+    
+  
+    
+      <p class="font-semibold">o tɛ bhrɔ́bhrɔ́ bɛn ló khɛ́n brɛ tɛ nɔ̂n a san</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> o </p>
+              <p> pro.indef </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> tɛ </p>
+              <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɓrɔ́ɓrɔ́ </p>
+              <p> a.lot </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> bɛ̃ </p>
+              <p> indef </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ló </p>
+              <p> dem </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> khɛ̃́ </p>
+              <p> rel </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> brɛ </p>
+              <p> one </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> tɛ </p>
+              <p> cop </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> nɔ̃̂ </p>
+              <p> foc </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> a </p>
+              <p> 3.res </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> sã </p>
+              <p> choose </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">There are a lot of people but he chooses one.</p>
+    
+  
+    
+      <p class="font-semibold">ɔ́n ti bha hɛ́nmɛn ɔ́n ne só khú</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɔ̃́ </p>
+              <p> 2pl.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ti </p>
+              <p> approach </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɓá </p>
+              <p> come </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɛ̃́mɛ̃ </p>
+              <p> front </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɔ̃́ </p>
+              <p> 2pl.nom </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ne </p>
+              <p> neg </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> só </p>
+              <p> fear </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> khú </p>
+              <p> part </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">Approach, do not be afraid !</p>
+    
+  
+    
+      <p class="font-semibold">yankan mɔ́n trɛ hɔ́n tho</p>
+      
+      
+      <div class="flex flex-row text-left gap-2">
+        
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> ɲãkã </p>
+              <p> God </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> mɔ̃́ </p>
+              <p> hand </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> trɛ </p>
+              <p> stay </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> hɔ̃́ </p>
+              <p> 2pl.str </p>
+            </div>
+          
+            <div class="flex flex-col text-left">
+              <p class="font-semibold"> tho </p>
+              <p> top </p>
+            </div>
+          
+        </div>
+      <p class="pb-3">The hand of God is good.</p>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+<script type="text/javascript" src= "https://jeslynnguyen.github.io/mam-texts-site/js/storyViewToggle.js"></script>
+ 
+  </div>
+  <script type="text/javascript" src="https://jeslynnguyen.github.io/mam-texts-site/js/toggle.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
