@@ -1,0 +1,65 @@
+# The URL the site will be built for
+base_url = "https://lethalNeutrino.github.io/assc-zola"
+
+title = "Atchan Song and Story Corpus"
+
+# Whether to automatically compile all Sass files in the sass directory
+# compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+ignored_content = ["content/**/*.toml"]
+
+default_language = "en"
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[languages.fr]
+title = "Recueil de contes et chants Atchan"
+build_search_index = true
+
+[languages.fr.translations]
+language = "Langue"
+lang_name = "Français"
+orthography = "Orthographe"
+home = "Page d'accueil"
+texts = "Textes"
+project_members = "Membres du Projet"
+storytellers = "Des conteurs"
+dictionary = "Dictionnaire"
+by = "de"
+view_option = "Options d'Affichage"
+default_view = "Défaut"
+ortho_gloss = "Glose orthographique"
+ipa_gloss = "Glose API"
+story_view = "Histoire"
+sentences_translation = "french"
+glosses_translation = "gloss_fr"
+story_title = "name_fr"
+
+[translations]
+language = "Language"
+lang_name = "English"
+orthography = "Orthography"
+home = "Home"
+texts = "Texts"
+dictionary = "Dictionary"
+project_members = "Project Members"
+storytellers = "Storytellers"
+by = "by"
+view_option = "View options"
+default_view = "Default"
+ortho_gloss = "Orthographic gloss"
+ipa_gloss = "IPA gloss"
+story_view = "Story"
+sentences_translation = "utterance"
+glosses_translation = "gloss"
+story_title = "name"
+
+
+[extra]
+# Put all your custom variables here
