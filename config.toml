@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "https://lethalNeutrino.github.io/assc-zola"
 
-title = "Atchan Song and Story Corpus"
+title = "Mam Texts"
 
 # Whether to automatically compile all Sass files in the sass directory
 # compile_sass = true
@@ -18,30 +18,13 @@ default_language = "en"
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
 
-[languages.fr]
-title = "Recueil de contes et chants Atchan"
+[languages.en]
+title = "Mam Texts"
 build_search_index = true
+content_dir = "content/en"
+home = "_index.en.md"  # English homepage
 
-[languages.fr.translations]
-language = "Langue"
-lang_name = "Français"
-orthography = "Orthographe"
-home = "Page d'accueil"
-texts = "Textes"
-project_members = "Membres du Projet"
-storytellers = "Des conteurs"
-dictionary = "Dictionnaire"
-by = "de"
-view_option = "Options d'Affichage"
-default_view = "Défaut"
-ortho_gloss = "Glose orthographique"
-ipa_gloss = "Glose API"
-story_view = "Histoire"
-sentences_translation = "french"
-glosses_translation = "gloss_fr"
-story_title = "name_fr"
-
-[translations]
+[languages.en.translations]
 language = "Language"
 lang_name = "English"
 orthography = "Orthography"
@@ -59,6 +42,31 @@ story_view = "Story"
 sentences_translation = "utterance"
 glosses_translation = "gloss"
 story_title = "name"
+
+[languages.es]
+title = "Mam Texts - Español"
+build_search_index = true
+content_dir = "content/es"
+home = "_index.es.md"  # Spanish homepage
+
+[languages.es.translations]
+language = "Idioma"
+lang_name = "Español"
+orthography = "Ortografía"
+home = "Inicio"
+texts = "Textos"
+dictionary = "Diccionario"
+project_members = "Miembros del Proyecto"
+storytellers = "Cuentacuentos"
+by = "por"
+view_option = "Opciones de visualización"
+default_view = "Predeterminado"
+ortho_gloss = "Glosa ortográfica"
+ipa_gloss = "Glosa IPA"
+story_view = "Historia"
+sentences_translation = "enunciado"
+glosses_translation = "glosa"
+story_title = "nombre"
 
 
 [extra]

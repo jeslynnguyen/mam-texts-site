@@ -2,3 +2,6 @@
 {% block content %}
 {{ section.content | safe }}
 {% endblock content %}
+
+<a href="{{ page.lang | url_for }}">{{ page.lang == 'en' and 'Español' or 'English' }}</a>
+
